@@ -1,0 +1,72 @@
+
+1. Install django freamwrok by using comand :
+
+    pip install django.
+
+2. Cretae project in folder by using command :
+
+    admin-django startproject zip_air_lines
+
+3. Cretae app in folder by using command :
+
+    python manage.py startapp zip_app    
+
+4. install for virtual environment pip install virtualenv
+
+5. Create virtual environment in python by using command :
+
+    python -m venv env  
+
+6. Activate virtual environment by env/Scripits/
+
+7. It will look like this (env) E:\Rohini\zip_air_lines
+
+8. Run the django project run by : python manage.py runserver
+
+9. Start server we can  :
+
+        System check identified no issues (0 silenced).
+
+        June 10, 2022 - 11:25:16
+
+        Django version 4.0.5, using settings 'zip_air_lines.settings'
+
+        Starting development server at http://127.0.0.1:8000/        
+
+        Quit the server with CTRL-BREAK.
+
+10. Add app in settings.py in INSTALLED_APPS
+
+11. install restfreamwrok : pip install django_rest_freamwrok and add in INSTALLED_APPS.
+
+12. write the code in views.py Using RESTAPI. Create POST api using serializers.
+
+13. we create serializers.py for get data in json formate. create class UserSerializer(serializers.Serializer):
+
+    use parameter :
+
+     1. plain_id = Plain id.
+
+     2. passenger_no = Number of Passenger.
+
+     3. planeCapacity = fuel tank Capacity.
+
+     3. flueConsumption = fule consumption by plain id and Number of Passenger
+
+     4. totalflytime = take fly time by each plain.
+
+     5. Total_Fuel = total fuel consumption of all plain.
+
+     6. Total_Fly = total fly time of all plain
+
+14. we create unit test case in test.py. create funtion for test our api using api url .
+
+    Run command : python manage.py test
+
+    we get responce:
+
+    <Response status_code=200, "application/json">
+
+        Ran 3 tests in 0.031s
+        OK
+        Destroying test database for alias 'default'...
